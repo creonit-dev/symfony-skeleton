@@ -1,0 +1,4 @@
+services:
+    app.authorization:
+        class: AppBundle\Service\Authorization
+        arguments: ["@service_container"]

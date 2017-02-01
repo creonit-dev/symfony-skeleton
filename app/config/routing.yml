@@ -1,0 +1,8 @@
+admin:
+    resource: "@CreonitAdminBundle/Controller/"
+    type:     annotation
+    prefix: /admin
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

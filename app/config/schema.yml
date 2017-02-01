@@ -1,0 +1,24 @@
+config:
+    required: true
+
+database:
+    +:
+        name: default
+        namespace: AppBundle\Model
+        defaultIdMethod: native
+        identifierQuoting: true
+
+    +vendor:
+        type: mysql
+        parameters:
+            Engine: InnoDB
+            Charset: utf8
+
+    +behavior:
+        - auto_add_pk
+        - cache
+
+    user:
+        email: text
+        name: text
+

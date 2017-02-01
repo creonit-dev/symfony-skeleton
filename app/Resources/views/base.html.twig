@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="format-detection" content="address=no">
+        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+
+        {{ creonit_page.head | raw }}
+
+        {% block meta %}{% endblock %}
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('css/vendor.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/common.css') }}">
+        {% endblock %}
+
+        <script>
+            var baseUrl = '{{ app.request.baseUrl }}';
+        </script>
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+
+        {% block javascripts %}
+            <script src="{{ asset("js/vendor.js") }}"></script>
+            <script src="{{ asset("js/common.js") }}"></script>
+        {% endblock %}
+    
+        {% if app.environment != 'dev' %}
+            {% include 'code.html.twig' %}
+        {% endif %}
+    </body>
+</html>
