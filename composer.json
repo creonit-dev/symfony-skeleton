@@ -28,7 +28,7 @@
         "propel/propel-bundle": "3.0.x-dev",
         "creonit/admin-bundle": "^0.1.0",
         "creonit/media-bundle": "^0.1.1",
-        "creonit/propel-schema-converter-bundle": "^0.1.0",
+        "creonit/propel-schema-converter-bundle": "^0.2.0",
         "creonit/page-bundle": "^0.1.3",
         "creonit/propel-holder-behavior": "^0.1.0",
         "creonit/propel-tree-behavior": "^0.1.0",
