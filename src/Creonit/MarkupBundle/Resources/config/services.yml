@@ -1,0 +1,8 @@
+services:
+    creonit_markup.routing_loader:
+        class: Creonit\MarkupBundle\Routing\MarkupLoader
+        tags: [{name: routing.loader}]
+
+    creonit_markup.adapter:
+        class: Creonit\MarkupBundle\Adapter\Adapter
+        arguments: ['@service_container']

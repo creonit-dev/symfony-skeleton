@@ -3,6 +3,15 @@ admin:
     type:     annotation
     prefix: /admin
 
-app:
-    resource: "@AppBundle/Controller/"
+api:
+    resource: "@AppBundle/Controller/Api/"
     type:     annotation
+    prefix: /api
+
+#creonit_markup:
+#    resource: .
+#    type: markup
+
+creonit_page:
+    resource: .
+    type: extra
