@@ -5,7 +5,6 @@ thumbs.db
 
 /app/config/parameters.yml
 /app/propel/
-/bin/symfony_requirements
 /build/
 /phpunit.xml
 /var/*
@@ -18,6 +17,7 @@ thumbs.db
 !/var/sessions
 /var/sessions/*
 !var/sessions/.gitkeep
+!var/SymfonyRequirements.php
 /vendor/
 /web/bundles/
 /web/cache/
@@ -29,7 +29,6 @@ thumbs.db
 /web/video/
 /web/uploads/*
 /web/sitemap.xml
-/web/config.php
 /markup/
 /src/AppBundle/Model/Base/
 /src/AppBundle/Model/Map/

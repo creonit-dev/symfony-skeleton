@@ -24,7 +24,6 @@ class AppKernel extends Kernel
             new Creonit\UserBundle\CreonitUserBundle(),
             new Creonit\AdminBundle\CreonitAdminBundle(),
             new AppBundle\AppBundle(),
-            new \Creonit\MarkupBundle\CreonitMarkupBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
