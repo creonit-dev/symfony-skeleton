@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+    nginx:
+        restart: always
+
+    php:
+        restart: always
+        volumes:
+            - ./docker/php/php-fpm.prod.conf:/usr/local/etc/php-fpm.d/www-prod.conf:cached
+
+    markup: bash -c "npm install; bower install; gulp external:build"

@@ -7,6 +7,7 @@ imports:
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: ru
+    asset_version: 1
 
 framework:
     #esi:             ~
@@ -18,7 +19,7 @@ framework:
     form:            ~
     csrf_protection: ~
     validation:      { enable_annotations: true }
-    #serializer:      { enable_annotations: true }
+    serializer:      { enable_annotations: true }
     templating:
         engines: ['twig']
     default_locale:  "%locale%"
@@ -30,7 +31,8 @@ framework:
         save_path:   "%kernel.root_dir%/../var/sessions/%kernel.environment%"
     fragments:       ~
     http_method_override: true
-    assets: ~
+    assets:
+        version_strategy: 'app.asset.gulp_buster_version_strategy'
 
     php_errors:
         log: true
@@ -39,6 +41,9 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: false
+    globals:
+        storage: '@app.storage'
+        form_service: '@app.form_service'
 
 # Swiftmailer Configuration
 swiftmailer:
@@ -67,13 +72,22 @@ propel:
 
 creonit_admin:
     title: "Project"
-
-creonit_page:
-    controller: AppBundle:Default:page
-
-creonit_mailing:
-    from: noreply@localhost
-    template: ::mail.html.twig
+    modules:
+        User: {permission: 'ROLE_NON_EXISTENT'}
 
 creonit_user:
-    authorization: "@AuthorizationService"
+    authorization: "@app.authorization"
+
+creonit_page:
+    controller: 'CreonitMarkupBundle:Template:render'
+    ignore_route: '(^creonit_|^hwi_oauth_|^oauth\.|\.fragment$)'
+    ignore_path: '^/api/'
+
+creonit_mailing:
+    from: {"noreply@localhost": "Project"}
+    template: mail.twig
+
+cocur_slugify:
+    lowercase: true
+    separator: '-'
+    rulesets: ['russian']

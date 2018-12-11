@@ -1,0 +1,11 @@
+{% extends "common/base.twig" %}
+{% set page = load('pages', {path: request.path}) %}
+
+{% block body %}
+    <div class="block">
+        <div class="block-wrapper">
+            <h1>{{ page.title|raw }}</h1>
+            {{ page.content|raw }}
+        </div>
+    </div>
+{% endblock %}

@@ -3,6 +3,26 @@ admin:
     type:     annotation
     prefix: /admin
 
+creonit_rest:
+    resource: "@CreonitRestBundle/Controller/"
+    type:     annotation
+    prefix:   /openapi
+
+creonit_page:
+    resource: .
+    type: extra
+
+markup:
+    resource: markup_routes.yml
+    type: markup
+
+
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
+
+api:
+    resource: "@AppBundle/Controller/Api/"
+    type:     annotation
+    prefix: /api
+

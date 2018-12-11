@@ -23,6 +23,9 @@ class AppKernel extends Kernel
             new Creonit\MailingBundle\CreonitMailingBundle(),
             new Creonit\UserBundle\CreonitUserBundle(),
             new Creonit\AdminBundle\CreonitAdminBundle(),
+            new Creonit\RestBundle\CreonitRestBundle(),
+            new Creonit\MarkupBundle\CreonitMarkupBundle(),
+            new Cocur\Slugify\Bridge\Symfony\CocurSlugifyBundle(),
             new AppBundle\AppBundle(),
         ];
 

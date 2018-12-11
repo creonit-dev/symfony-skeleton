@@ -1,0 +1,33 @@
+services:
+    creonit_markup:
+        class: Creonit\MarkupBundle\Markup
+        arguments: ['@request_stack', '@debug.stopwatch', '@kernel', '%kernel.debug%']
+        public: false
+
+    creonit_markup.routing_loader:
+        class: Creonit\MarkupBundle\Routing\MarkupLoader
+        arguments: ['@file_locator']
+        tags: [{name: routing.loader}]
+        public: false
+
+    creonit_markup.twig.markup_extension:
+        class: Creonit\MarkupBundle\Twig\Extension\MarkupExtension
+        arguments: ['@creonit_markup']
+        tags: [{name: twig.extension}]
+        public: false
+
+    creonit_markup.event.event_subscriber:
+        class: Creonit\MarkupBundle\Event\EventSubscriber
+        arguments: ['@creonit_markup', '@twig', '@security.token_storage', '@serializer']
+        tags: [{name: kernel.event_subscriber}]
+        public: false
+
+    creonit_markup.normalizer.request_normalizer:
+        class: Creonit\MarkupBundle\Normalizer\RequestNormalizer
+        tags: [{name: serializer.normalizer}]
+        public: false
+
+    creonit_markup.normalizer.user_normalizer:
+        class: Creonit\MarkupBundle\Normalizer\UserNormalizer
+        tags: [{name: serializer.normalizer}]
+        public: false

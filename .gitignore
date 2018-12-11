@@ -3,6 +3,7 @@
 /*.sublime-workspace
 thumbs.db
 
+/.env
 /app/config/parameters.yml
 /app/propel/
 /build/

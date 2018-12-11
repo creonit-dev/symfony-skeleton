@@ -34,7 +34,8 @@
         "creonit/propel-tree-behavior": "^0.1.0",
         "creonit/mailing-bundle": "^0.1.1",
         "creonit/user-bundle": "^0.1.4",
-        "creonit/propel-cache-behavior": "^0.1.0"
+        "creonit/propel-cache-behavior": "^0.1.0",
+        "cocur/slugify": "^3.1"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",

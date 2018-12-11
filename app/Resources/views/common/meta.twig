@@ -1,0 +1,10 @@
+<title>{{ title }}</title>
+{% if title is not empty %}
+    <meta name="title" content="{{ title }}">
+{% endif %}
+{% if description is not empty %}
+    <meta name="description" content="{{ description }}">
+{% endif %}
+{% if keywords is not empty %}
+    <meta name="keywords" content="{{ keywords }}">
+{% endif %}

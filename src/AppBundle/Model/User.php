@@ -17,13 +17,31 @@ use Symfony\Component\Security\Core\User\UserInterface;
  */
 class User extends BaseUser
 {
+    const PROVIDER_EMAIL = 'email';
+
+    public static $providers = [
+        self::PROVIDER_EMAIL => 'Email',
+    ];
+
+
     public function isEqualTo(UserInterface $user)
     {
-        return true;
+        if($this !== $user) {
+            return true;
+        }
+
+        $roles = $this->getRoles();
+        $newRoles = $user->getRoles();
+        return !(count($roles) != count($newRoles) || array_diff($roles, $newRoles));
     }
 
     public function getTitle()
     {
         return $this->name;
+    }
+
+    public function getTitleFull()
+    {
+        return $this->getTitle();
     }
 }

@@ -1,0 +1,6 @@
+version: '3'
+
+services:
+    markup:
+        ports:
+            - "${MARKUP_PORT}:4000"
