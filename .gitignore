@@ -31,6 +31,5 @@ thumbs.db
 /web/uploads/*
 /web/sitemap.xml
 /web/config.php
-/markup/
 /src/AppBundle/Model/Base/
 /src/AppBundle/Model/Map/

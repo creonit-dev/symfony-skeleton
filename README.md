@@ -1,4 +1,4 @@
-# Project
+# {Project}
 
 ### Первоначальная установка
 
@@ -8,7 +8,7 @@
   
 - Запустите контейнеры 
 
-  `bin/docker up -d`
+  `docker-compose up -d`
   
 - Установите PHP зависимости
 
@@ -16,7 +16,7 @@
   
   >Если у вас не выполняется эта команда, попробуйте так:
   >
-  >`bin/docker exec php composer install`
+  >`docker-compose exec php composer install`
   
   Во время установки symfony запросит некоторые параметры 
   (например, подключение к базе)
@@ -33,16 +33,16 @@
 
       sudo vim /etc/hosts
       
-      127.0.0.1 project.localhost
+      127.0.0.1 {project}.localhost
   
 ### Работа с docker-compose
 - Запустить контейнеры
 
-  `bin/docker up -d`
+  `docker-compose up -d`
   
 - Остановить контейнеры
 
-  `bin/docker down`
+  `docker-compose down`
   
 ### Работа с проектом
 
@@ -66,4 +66,4 @@
 
 - Для перезагрузки сборщика markup
 
-  `bin/docker restart markup`
+  `docker-compose restart markup`

@@ -17,7 +17,7 @@ services:
         volumes:
             - ./:/app:cached
             - ./docker/php/php.ini:/usr/local/etc/php/php.ini:cached
-            - ./docker/php/php-fpm.conf:/usr/local/etc/php-fpm.d/www.conf:cached
+            - ./docker/php/php-fpm.conf:/usr/local/etc/php-fpm.d/zz.conf:cached
         user: ${DOCKER_UID}
         env_file: .env
         extra_hosts:
@@ -30,6 +30,6 @@ services:
         user: ${DOCKER_UID}
         volumes:
             - ./:/app:cached
-        command: bash -c "npm install; bower install; gulp external"
+        command: bash -c "npm install --no-save; bower install; gulp external"
         environment:
             NODE_ENV: ${MARKUP_ENV}
