@@ -20,7 +20,7 @@ class FormsController extends Controller
      * @Rest\PathParameter("id", type="string", description="Идентификатор формы обратной связи")
      * @Rest\RequestParameter("field_1", type="string", description="Поля формы")
      *
-     * @Route("/{id}/", name="form")
+     * @Route("/{id}", name="form")
      * @Method("POST")
      */
     public function postForm(Request $request, $id)
