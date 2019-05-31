@@ -34,7 +34,7 @@ class FormsController extends Controller
         $formService = $this->get('app.form_service');
         $handler->checkFound($form = $formService->getForm($id));
 
-        $data = $request->request->all();
+        $data = array_merge($request->request->all(), $request->files->all());
         $data['url'] = $request->headers->get('referer');
 
         foreach ($form->getFields() as $field) {
