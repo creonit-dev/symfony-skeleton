@@ -20,7 +20,7 @@ class FormsController extends Controller
      * @Rest\PathParameter("id", type="string", description="Идентификатор формы обратной связи")
      * @Rest\RequestParameter("field_1", type="string", description="Поля формы")
      *
-     * @Route("/{id}/", name="form")
+     * @Route("/{id}", name="form")
      * @Method("POST")
      */
     public function postForm(Request $request, $id)
@@ -34,7 +34,7 @@ class FormsController extends Controller
         $formService = $this->get('app.form_service');
         $handler->checkFound($form = $formService->getForm($id));
 
-        $data = $request->request->all();
+        $data = array_merge($request->request->all(), $request->files->all());
         $data['url'] = $request->headers->get('referer');
 
         foreach ($form->getFields() as $field) {
