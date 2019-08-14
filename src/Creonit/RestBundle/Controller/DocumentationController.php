@@ -67,6 +67,7 @@ class DocumentationController extends Controller
             $parameters = [];
             $requiredRequestBody = [];
             $requestBody = [];
+            $hasFile = false;
 
             $annotations = $annotationReader->getMethodAnnotations($reflectionMethod);
             foreach ($annotations as $annotation) {
@@ -76,14 +77,29 @@ class DocumentationController extends Controller
 
                 } else if ($annotation instanceof AbstractParameter) {
                     if ($annotation->in == 'request') {
+                        if ($annotation->format == 'binary') {
+                            $hasFile = true;
+                        }
+
                         $parameter = [
                             'type' => $annotation->type,
-                            'format' => $annotation->format,
                             'description' => $annotation->description,
                         ];
 
-                        if ($annotation->format) {
-                            $parameter['format'] = $annotation->format;
+                        if ($annotation->array) {
+                            $parameter['type'] = 'array';
+                            $parameter['items'] = [
+                                'type' => $annotation->type
+                            ];
+
+                            if ($annotation->format) {
+                                $parameter['items']['format'] = $annotation->format;
+                            }
+
+                        } else {
+                            if ($annotation->format) {
+                                $parameter['format'] = $annotation->format;
+                            }
                         }
 
                         $requestBody[$annotation->name] = $parameter;
@@ -98,11 +114,24 @@ class DocumentationController extends Controller
                             'in' => $annotation->in,
                             'description' => $annotation->description,
                             'required' => $annotation->required,
-                            'type' => $annotation->type,
+                            'schema' => [
+                                'type' => $annotation->type,
+                            ]
                         ];
 
-                        if ($annotation->format) {
-                            $parameter['format'] = $annotation->format;
+                        if ($annotation->array) {
+                            $parameter['style'] = 'deepObject';
+                            $parameter['schema']['type'] = 'array';
+                            $parameter['schema']['items']['type'] = $annotation->type;
+
+                            if ($annotation->format) {
+                                $parameter['schema']['items']['format'] = $annotation->format;
+                            }
+
+                        } else {
+                            if ($annotation->format) {
+                                $parameter['schema']['format'] = $annotation->format;
+                            }
                         }
 
                         $parameters[] = $parameter;
@@ -149,11 +178,16 @@ class DocumentationController extends Controller
             if ($requestBody) {
                 $operation['requestBody'] = [
                     'content' => [
-                        'application/x-www-form-urlencoded' => [
+                        $hasFile ? 'multipart/form-data' : 'application/x-www-form-urlencoded' => [
                             'schema' => [
                                 'type' => 'object',
                                 'required' => $requiredRequestBody,
                                 'properties' => $requestBody
+                            ],
+                            'encoding' => [
+                                'project' => [
+                                    'explode' => true
+                                ]
                             ]
                         ]
                     ]

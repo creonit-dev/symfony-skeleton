@@ -10,6 +10,7 @@ abstract class AbstractParameter
     public $format;
     public $required;
     public $in;
+    public $array;
 
     public function __construct($data)
     {
@@ -19,5 +20,6 @@ abstract class AbstractParameter
         $this->description = isset($data['description']) ? $data['description'] : '';
         $this->type = isset($data['type']) ? $data['type'] : 'string';
         $this->format = isset($data['format']) ? $data['format'] : '';
+        $this->array = isset($data['array']) ? (bool) $data['array'] : false;
     }
 }
