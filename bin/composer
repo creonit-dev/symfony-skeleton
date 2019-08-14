@@ -1,2 +1,2 @@
 #!/bin/sh
-bin/docker exec php php -d memory_limit=-1 /usr/local/bin/composer $@
+docker-compose exec php php -d memory_limit=-1 /usr/local/bin/composer $@
