@@ -14,11 +14,13 @@ class RestError
     protected $status = 400;
     public $query;
     public $request;
+    public $files;
 
     public function __construct()
     {
         $this->query = new ParameterBag();
         $this->request = new ParameterBag();
+        $this->files = new ParameterBag();
     }
 
 
@@ -69,7 +71,7 @@ class RestError
      */
     public function has()
     {
-        return ($this->message !== null || $this->request->count() || $this->query->count());
+        return ($this->message !== null || $this->request->count() || $this->query->count() || $this->files->count());
     }
 
     /**
@@ -88,6 +90,10 @@ class RestError
 
         if ($this->request->count()) {
             $data['request'] = $this->request->all();
+        }
+
+        if ($this->files->count()) {
+            $data['files'] = $this->files->all();
         }
 
         return ['error' => $data];
