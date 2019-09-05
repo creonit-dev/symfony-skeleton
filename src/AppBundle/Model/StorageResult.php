@@ -21,7 +21,7 @@ class StorageResult extends BaseStorageResult
     public function getTitle() {
         $title = '#' . $this->getId();
 
-        if($titleValue = StorageValueQuery::create()->filterByStorageResult($this)->useStorageFieldQuery()->filterByCode('title%')->endUse()->findOne()) {
+        if($titleValue = StorageValueQuery::create()->filterByStorageResult($this)->useStorageFieldQuery()->filterByCode('title')->endUse()->findOne()) {
             if ($titleValue->getText()) {
                 return $titleValue->getText();
             } else {
