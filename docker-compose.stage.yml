@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+    nginx:
+        restart: unless-stopped
+
+    php:
+        restart: unless-stopped
+        volumes:
+            - ./docker/php/php-fpm.prod.conf:/usr/local/etc/php-fpm.d/zzz-prod.conf:cached
+
+    mailhog:
+        image: mailhog/mailhog
+        restart: unless-stopped
+        ports:
+            - "${MAILHOG_HTTP_HOST}:${MAILHOG_HTTP_PORT}:8025"

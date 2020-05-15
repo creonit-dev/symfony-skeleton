@@ -1,69 +1,66 @@
-# {Project}
+# Symfony Skeleton
 
 ### Первоначальная установка
 
-- Скопируйте и настройте переменные окружения .env
+- Скопируйте и настройте переменные окружения .env:
+    `cp .env.orig .env`
   
-  `cp .env.dist .env`
-  
-- Запустите контейнеры 
-
+- Запустите контейнеры:
   `docker-compose up -d`
   
-- Установите PHP зависимости
-
+- Установите PHP зависимости:
   `bin/composer install`
-  
-  >Если у вас не выполняется эта команда, попробуйте так:
-  >
-  >`docker-compose exec php composer install`
-  
-  Во время установки symfony запросит некоторые параметры 
-  (например, подключение к базе)
-  
-- Соберите модель
-
+    
+- Соберите модель:
   `bin/app propel:model:build`
   
-- Установите ассеты
-
+- Установите ассеты:
   `bin/app assets:install`
-   
-- Добавьте хост проекта в /etc/hosts (C:/Windows/System32/drivers/etc/hosts)
-
-      sudo vim /etc/hosts
-      
-      127.0.0.1 {project}.localhost
+ 
+---  
+  
+### Работа с локальной базой данных
+1. В файле .env замените переменные 
+    ```
+    COMPOSE_FILE=docker-compose.yml:docker-compose.override.yml:docker-compose.db.yml
+    DATABASE_HOST=db
+   ```
+2. Остановите и запустите контейнеры заново
+3. Загрузите SQL-дамп базы
+   ```
+   docker-compose exec -T db sh -c 'exec mysql -uroot -p"$MYSQL_ROOT_PASSWORD" $MYSQL_DATABASE' < dump.sql
+   ```
+   **Где dump.sql — название файла с дампом**
+  
+---  
   
 ### Работа с docker-compose
-- Запустить контейнеры
-
+- Запустить контейнеры:
   `docker-compose up -d`
   
-- Остановить контейнеры
-
+- Остановить контейнеры:
   `docker-compose down`
+  
+---  
   
 ### Работа с проектом
 
-##### Propel миграция
-- Собираем модель
-
+#### Propel миграция
+- Собираем модель:
   `bin/app propel:model:build`
   
-- Создаем миграцию
-
+- Создаем миграцию:
   `bin/app propel:migration:diff`
   
 - Проверяем запросы в созданном файле миграции, удаляем все лишнее
   
-- Выполняем запросы миграции
-
+- Выполняем запросы миграции:
   `bin/app propel:migration:migrate`
 
+#### Markup
 
-##### Markup
-
-- Для перезагрузки сборщика markup
-
+- Для перезагрузки сборщика:
   `docker-compose restart markup`
+  
+- Отследить работу сборщика: 
+  `docker-compose logs -f markup`

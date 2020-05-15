@@ -1,6 +1,0 @@
-#!/bin/sh
-source ./.env
-git pull
-bin/docker run --rm markup
-bin/docker exec php composer install
-bin/docker exec php php bin/console propel:model:build

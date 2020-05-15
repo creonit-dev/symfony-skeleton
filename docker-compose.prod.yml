@@ -8,6 +8,3 @@ services:
         restart: always
         volumes:
             - ./docker/php/php-fpm.prod.conf:/usr/local/etc/php-fpm.d/zzz-prod.conf:cached
-
-    markup:
-        command: bash -c "npm install --no-save; bower install; gulp external:build"

@@ -1,2 +1,0 @@
-#!/bin/sh
-bin/docker exec php php bin/console $@

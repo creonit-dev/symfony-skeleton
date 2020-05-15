@@ -1,0 +1,18 @@
+propel:
+    generator:
+        defaultConnection: default
+
+    runtime:
+        defaultConnection: default
+
+    database:
+        connections:
+            default:
+                adapter:    mysql
+                user:       '%env(DATABASE_USER)%'
+                password:   '%env(DATABASE_PASSWORD)%'
+                dsn:        'mysql:host=%env(DATABASE_HOST)%;dbname=%env(DATABASE_NAME)%;charset=UTF8'
+
+    paths:
+        sqlDir: '%kernel.project_dir%/var/propel/sql'
+        migrationDir: '%kernel.project_dir%/var/propel/migrations'
