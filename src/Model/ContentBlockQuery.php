@@ -2,10 +2,10 @@
 
 namespace App\Model;
 
-use App\Model\Base\TestQuery as BaseTestQuery;
+use App\Model\Base\ContentBlockQuery as BaseContentBlockQuery;
 
 /**
- * Skeleton subclass for performing query and update operations on the 'test' table.
+ * Skeleton subclass for performing query and update operations on the 'content_block' table.
  *
  *
  *
@@ -13,7 +13,7 @@ use App\Model\Base\TestQuery as BaseTestQuery;
  * application requirements.  This class will only be generated as
  * long as it does not already exist in the output directory.
  */
-class TestQuery extends BaseTestQuery
+class ContentBlockQuery extends BaseContentBlockQuery
 {
 
 }

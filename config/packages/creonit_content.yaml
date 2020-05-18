@@ -1,8 +1,8 @@
 creonit_content:
     types:
-#        blocks:
-#            title: Блоки
-#            component: ContentBlockType.ContentBlockTable
-#            icon: th
+        blocks:
+            title: Блоки
+            component: ContentBlockType.ContentBlockTable
+            icon: th
         text:
             title: Текст

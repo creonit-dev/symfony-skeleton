@@ -18,5 +18,5 @@ database:
     +behavior:
         - auto_add_pk
 
-    test:
-        test: text
+    content_block:
+        data: longvarchar

@@ -145,16 +145,16 @@
         },
         {
             "name": "creonit/markup-bundle",
-            "version": "v1.0.2",
+            "version": "v1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/creonit-dev/MarkupBundle.git",
-                "reference": "82aacf4e72f3119c3533a07efd5b0fa1c0d96d5a"
+                "reference": "930f091fcb7950ac302016b858448044c38917a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/creonit-dev/MarkupBundle/zipball/82aacf4e72f3119c3533a07efd5b0fa1c0d96d5a",
-                "reference": "82aacf4e72f3119c3533a07efd5b0fa1c0d96d5a",
+                "url": "https://api.github.com/repos/creonit-dev/MarkupBundle/zipball/930f091fcb7950ac302016b858448044c38917a8",
+                "reference": "930f091fcb7950ac302016b858448044c38917a8",
                 "shasum": ""
             },
             "require": {
@@ -175,7 +175,7 @@
                 "markup",
                 "symfony"
             ],
-            "time": "2020-05-17T08:21:32+00:00"
+            "time": "2020-05-18T09:23:29+00:00"
         },
         {
             "name": "creonit/media-bundle",

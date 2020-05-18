@@ -2,10 +2,10 @@
 
 namespace App\Model;
 
-use App\Model\Base\Test as BaseTest;
+use App\Model\Base\ContentBlock as BaseContentBlock;
 
 /**
- * Skeleton subclass for representing a row from the 'test' table.
+ * Skeleton subclass for representing a row from the 'content_block' table.
  *
  *
  *
@@ -13,7 +13,7 @@ use App\Model\Base\Test as BaseTest;
  * application requirements.  This class will only be generated as
  * long as it does not already exist in the output directory.
  */
-class Test extends BaseTest
+class ContentBlock extends BaseContentBlock
 {
 
 }
