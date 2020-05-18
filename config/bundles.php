@@ -19,4 +19,5 @@ return [
     Creonit\RestBundle\CreonitRestBundle::class => ['all' => true],
     Creonit\MarkupBundle\CreonitMarkupBundle::class => ['all' => true],
     Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle::class => ['all' => true],
+    \Cocur\Slugify\Bridge\Symfony\CocurSlugifyBundle::class => ['all' => true],
 ];

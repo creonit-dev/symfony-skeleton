@@ -1,0 +1,4 @@
+cocur_slugify:
+    lowercase: true
+    separator: '-'
+    rulesets: ['russian']

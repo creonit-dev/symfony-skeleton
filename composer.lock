@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6bc8dd4618b7922ce04ce7953b2991a8",
+    "content-hash": "2d166eff5cf861cacbde6642383efd05",
     "packages": [
         {
             "name": "cocur/slugify",
@@ -1142,21 +1142,21 @@
         },
         {
             "name": "propel/propel",
-            "version": "2.0",
+            "version": "2.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/creonit-dev/Propel2",
-                "reference": "master"
+                "reference": "62b7d0c59ca51e38eb3921497bd9f2c13a2add1c"
             },
             "type": "library"
         },
         {
             "name": "propel/propel-bundle",
-            "version": "5.0",
+            "version": "5.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/creonit-dev/PropelBundle",
-                "reference": "4.0"
+                "reference": "f8f697b587977ee2512d024bc7b1710bf0e9c450"
             },
             "type": "library"
         },
