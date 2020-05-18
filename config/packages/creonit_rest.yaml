@@ -1,0 +1,3 @@
+creonit_rest:
+    path_patterns:
+        - '^/api'

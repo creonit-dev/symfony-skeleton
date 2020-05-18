@@ -10,13 +10,7 @@
   
 - Установите PHP зависимости:
   `bin/composer install`
-    
-- Соберите модель:
-  `bin/app propel:model:build`
-  
-- Установите ассеты:
-  `bin/app assets:install`
- 
+     
 ---  
   
 ### Работа с локальной базой данных
@@ -56,11 +50,3 @@
   
 - Выполняем запросы миграции:
   `bin/app propel:migration:migrate`
-
-#### Markup
-
-- Для перезагрузки сборщика:
-  `docker-compose restart markup`
-  
-- Отследить работу сборщика: 
-  `docker-compose logs -f markup`

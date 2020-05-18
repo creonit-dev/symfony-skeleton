@@ -1,0 +1,4 @@
+creonit_page:
+    controller: 'CreonitMarkupBundle:Template:render'
+    ignore_route: '^creonit_'
+    ignore_path: '^/api/'
