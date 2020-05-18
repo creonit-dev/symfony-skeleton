@@ -91,10 +91,15 @@
             "type": "package",
             "package": {
                 "name": "propel/propel",
-                "version": "2.0.10",
+                "version": "2.0.11",
                 "source": {
                     "type": "git",
                     "url": "https://github.com/creonit-dev/Propel2",
+                    "reference": "62b7d0c59ca51e38eb3921497bd9f2c13a2add1c"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/creonit-dev/Propel2/zipball/62b7d0c59ca51e38eb3921497bd9f2c13a2add1c",
                     "reference": "62b7d0c59ca51e38eb3921497bd9f2c13a2add1c"
                 }
             }
@@ -103,10 +108,15 @@
             "type": "package",
             "package": {
                 "name": "propel/propel-bundle",
-                "version": "5.0.10",
+                "version": "5.0.11",
                 "source": {
                     "type": "git",
                     "url": "https://github.com/creonit-dev/PropelBundle",
+                    "reference": "f8f697b587977ee2512d024bc7b1710bf0e9c450"
+                },
+                "dist":  {
+                    "type": "zip",
+                    "url": "https://api.github.com/creonit-dev/PropelBundle/zipball/f8f697b587977ee2512d024bc7b1710bf0e9c450",
                     "reference": "f8f697b587977ee2512d024bc7b1710bf0e9c450"
                 }
             }

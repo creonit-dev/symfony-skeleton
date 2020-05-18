@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2d166eff5cf861cacbde6642383efd05",
+    "content-hash": "2916f7b80553db8b2705cd327f3afec1",
     "packages": [
         {
             "name": "cocur/slugify",
@@ -78,16 +78,16 @@
         },
         {
             "name": "creonit/admin-bundle",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/creonit-dev/AdminBundle.git",
-                "reference": "f0af7cb5a02c126a89b8abe9e5ada42e792a2cb3"
+                "reference": "d26cff1d91eb3154bf328c4ae96b77a31b5a1c4a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/creonit-dev/AdminBundle/zipball/f0af7cb5a02c126a89b8abe9e5ada42e792a2cb3",
-                "reference": "f0af7cb5a02c126a89b8abe9e5ada42e792a2cb3",
+                "url": "https://api.github.com/repos/creonit-dev/AdminBundle/zipball/d26cff1d91eb3154bf328c4ae96b77a31b5a1c4a",
+                "reference": "d26cff1d91eb3154bf328c4ae96b77a31b5a1c4a",
                 "shasum": ""
             },
             "type": "library",
@@ -105,7 +105,7 @@
                 "creonit",
                 "symfony"
             ],
-            "time": "2020-05-15T15:09:55+00:00"
+            "time": "2020-05-18T11:19:07+00:00"
         },
         {
             "name": "creonit/content-bundle",
@@ -1142,20 +1142,30 @@
         },
         {
             "name": "propel/propel",
-            "version": "2.0.10",
+            "version": "2.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/creonit-dev/Propel2",
+                "reference": "62b7d0c59ca51e38eb3921497bd9f2c13a2add1c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/creonit-dev/Propel2/zipball/62b7d0c59ca51e38eb3921497bd9f2c13a2add1c",
                 "reference": "62b7d0c59ca51e38eb3921497bd9f2c13a2add1c"
             },
             "type": "library"
         },
         {
             "name": "propel/propel-bundle",
-            "version": "5.0.10",
+            "version": "5.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/creonit-dev/PropelBundle",
+                "reference": "f8f697b587977ee2512d024bc7b1710bf0e9c450"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/creonit-dev/PropelBundle/zipball/f8f697b587977ee2512d024bc7b1710bf0e9c450",
                 "reference": "f8f697b587977ee2512d024bc7b1710bf0e9c450"
             },
             "type": "library"
