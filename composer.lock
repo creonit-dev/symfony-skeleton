@@ -78,16 +78,16 @@
         },
         {
             "name": "creonit/admin-bundle",
-            "version": "v1.0.1",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/creonit-dev/AdminBundle.git",
-                "reference": "d26cff1d91eb3154bf328c4ae96b77a31b5a1c4a"
+                "reference": "3f9ea16e8ac6788567d9c84ae59e6f71131a4e94"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/creonit-dev/AdminBundle/zipball/d26cff1d91eb3154bf328c4ae96b77a31b5a1c4a",
-                "reference": "d26cff1d91eb3154bf328c4ae96b77a31b5a1c4a",
+                "url": "https://api.github.com/repos/creonit-dev/AdminBundle/zipball/3f9ea16e8ac6788567d9c84ae59e6f71131a4e94",
+                "reference": "3f9ea16e8ac6788567d9c84ae59e6f71131a4e94",
                 "shasum": ""
             },
             "type": "library",
@@ -105,7 +105,7 @@
                 "creonit",
                 "symfony"
             ],
-            "time": "2020-05-18T11:19:07+00:00"
+            "time": "2020-05-18T14:17:21+00:00"
         },
         {
             "name": "creonit/content-bundle",

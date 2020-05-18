@@ -4,6 +4,7 @@ namespace App\Admin\Content;
 
 use Creonit\ContentBundle\Admin\ContentBlockModule\AbstractContentBlockEditor;
 use Creonit\ContentBundle\Admin\ContentBlockModule\ContentBlockPreview;
+use Creonit\MediaBundle\Service\MediaService;
 
 class TextBlockEditor extends AbstractContentBlockEditor
 {
