@@ -66,8 +66,8 @@
     },
     "scripts": {
         "auto-scripts": {
-            "cache:clear": "symfony-cmd",
             "propel:model:build": "symfony-cmd",
+            "cache:clear": "symfony-cmd",
             "assets:install %PUBLIC_DIR%": "symfony-cmd"
         },
         "post-install-cmd": [
@@ -91,7 +91,7 @@
             "type": "package",
             "package": {
                 "name": "propel/propel",
-                "version": "2.0.11",
+                "version": "2.0.0",
                 "source": {
                     "type": "git",
                     "url": "https://github.com/creonit-dev/Propel2",
@@ -99,7 +99,7 @@
                 },
                 "dist": {
                     "type": "zip",
-                    "url": "https://api.github.com/creonit-dev/Propel2/zipball/62b7d0c59ca51e38eb3921497bd9f2c13a2add1c",
+                    "url": "https://api.github.com/repos/creonit-dev/Propel2/zipball/62b7d0c59ca51e38eb3921497bd9f2c13a2add1c",
                     "reference": "62b7d0c59ca51e38eb3921497bd9f2c13a2add1c"
                 }
             }
@@ -108,7 +108,7 @@
             "type": "package",
             "package": {
                 "name": "propel/propel-bundle",
-                "version": "5.0.11",
+                "version": "5.0.0",
                 "source": {
                     "type": "git",
                     "url": "https://github.com/creonit-dev/PropelBundle",
@@ -116,7 +116,7 @@
                 },
                 "dist":  {
                     "type": "zip",
-                    "url": "https://api.github.com/creonit-dev/PropelBundle/zipball/f8f697b587977ee2512d024bc7b1710bf0e9c450",
+                    "url": "https://api.github.com/repos/creonit-dev/PropelBundle/zipball/f8f697b587977ee2512d024bc7b1710bf0e9c450",
                     "reference": "f8f697b587977ee2512d024bc7b1710bf0e9c450"
                 }
             }
